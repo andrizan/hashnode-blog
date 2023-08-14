@@ -403,7 +403,7 @@ listen postgres
 Check our haproxy configuration using the following command:
 
 ```bash
-sudo /usr/sbin/haproxy -c -V -f /etc/haproxy/haproxy.cfg 
+sudo /usr/sbin/haproxy -c -V -f /etc/haproxy/haproxy.cfg
 ```
 
 If the configuration is valid, we can restart our haproxy service
@@ -437,7 +437,7 @@ psql -U postgres -h 199.180.130.99 -p 5000
 
 You now have a high availability PostgreSQL Cluster in Cloud Raya that is ready to use.
 
-## Reff
+## src
 
 repo: [https://github.com/andrizan/postgre-cluster](https://github.com/andrizan/postgre-cluster)
 

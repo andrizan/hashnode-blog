@@ -3,6 +3,7 @@ title: "Deploy MinIO Ubuntu Server: Single-Node Single-Drive"
 datePublished: Mon Aug 14 2023 10:36:52 GMT+0000 (Coordinated Universal Time)
 cuid: cllaqpu7i000709laauikdbh4
 slug: deploy-minio-ubuntu-server-single-node-single-drive
+tags: ubuntu, minio
 
 ---
 
@@ -316,6 +317,8 @@ scrape_configs:
 ```
 
 how to get tokens can be read here [https://min.io/docs/minio/linux/reference/minio-mc-admin/mc-admin-prometheus.html](https://min.io/docs/minio/linux/reference/minio-mc-admin/mc-admin-prometheus.html)
+
+install `mc-cli` binary [https://min.io/docs/minio/linux/reference/minio-mc.html](https://min.io/docs/minio/linux/reference/minio-mc.html)
 
 Next, move the configuration files and set their ownership so that Prometheus can access them. To do this, run the following commands:
 

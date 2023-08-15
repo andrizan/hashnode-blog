@@ -21,3 +21,9 @@ Windows 2019: [https://software-download.microsoft.com/download/pr/17763.737.190
 Windows 2022: [https://software-static.download.prss.microsoft.com/sg/download/888969d5-f34g-4e03-ac9d-1f9786c66749/SERVER\_EVAL\_x64FRE\_en-us.iso](https://software-static.download.prss.microsoft.com/sg/download/888969d5-f34g-4e03-ac9d-1f9786c66749/SERVER_EVAL_x64FRE_en-us.iso)
 
 src = [https://gist.github.com/vinhjaxt/a774ac87b0313a34f4c445048d8e13cf](https://gist.github.com/vinhjaxt/a774ac87b0313a34f4c445048d8e13cf)
+
+---
+
+Windows Server 2022 = [https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022)
+
+Windows Server 2019 = [https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)

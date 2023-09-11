@@ -36,7 +36,7 @@ As with any newly-installed software, it’s a good idea to ensure that Redis is
 Start by checking that the Redis service is running:
 
 ```bash
-sudo systemctl status redis
+sudo systemctl status redis-server
 ```
 
 ## Binding to localhost
@@ -72,7 +72,7 @@ sudo netstat -lnp | grep redis
 ```bash
 Output
 tcp        0      0 127.0.0.1:6379          0.0.0.0:*               LISTEN      14222/redis-server  
-tcp6       0      0 ::1:6379                :::*                    LISTEN      14222/redis-server  
+tcp6       0      0 ::1:6379                :::*                    LISTEN      14222/redis-server
 ```
 
 **Note**: The `netstat` command may not be available on your system by default. If this is the case, you can install it (along with a number of other handy networking tools) with the following command:

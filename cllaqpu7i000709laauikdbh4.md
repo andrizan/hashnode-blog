@@ -111,6 +111,9 @@ MINIO_VOLUMES="/mnt/data"
 #MINIO_SERVER_URL="http://domain:9060"
 #MINIO_CONSOLE_ADDRESS=":9000"
 
+# Uncomment the if use domain
+#MINIO_BROWSER_REDIRECT_URL="http://s3.domain.com/minio/ui"
+
 #MINIO_PROMETHEUS_URL=http://192.168.100.16:9090
 #MINIO_PROMETHEUS_JOB_ID="minio-job"
 ```

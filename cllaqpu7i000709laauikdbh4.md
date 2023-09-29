@@ -108,7 +108,11 @@ MINIO_VOLUMES="/mnt/data"
 
 # Uncomment the following line and replace the value with the correct hostname for the local machine and port for the MinIO server (9000 by default).
 
-#MINIO_SERVER_URL="http://minio.example.net:9000"
+#MINIO_SERVER_URL="http://domain:9060"
+#MINIO_CONSOLE_ADDRESS=":9000"
+
+#MINIO_PROMETHEUS_URL=http://192.168.100.16:9090
+#MINIO_PROMETHEUS_JOB_ID="minio-job"
 ```
 
 Include any other environment variables as required for your local deployment.

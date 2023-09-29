@@ -108,7 +108,7 @@ MINIO_VOLUMES="/mnt/data"
 
 # Uncomment the following line and replace the value with the correct hostname for the local machine and port for the MinIO server (9000 by default).
 
-#MINIO_SERVER_URL="http://domain:9060"
+#MINIO_SERVER_URL="http://ip:9060"
 #MINIO_CONSOLE_ADDRESS=":9000"
 
 # Uncomment the if use domain

@@ -120,7 +120,7 @@ MINIO_VOLUMES="/mnt/data"
 
 Include any other environment variables as required for your local deployment.
 
-## Nginx (Domain)
+## Nginx (reverse proxy)
 
 install nginx
 

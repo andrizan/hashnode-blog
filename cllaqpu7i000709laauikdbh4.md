@@ -232,7 +232,7 @@ You can use the MinIO Console for general administration tasks like Identity and
 
 If your local host firewall permits external access to the Console port, other hosts on the same network can access the Console using the IP or hostname for your local host.
 
-## Cloudflared Tunnel
+# Cloudflare Tunnel
 
 Disable `cache` to resolve error `403`
 

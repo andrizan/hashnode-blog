@@ -3,11 +3,63 @@ title: "Install PHP-FPM PostgreSQL Ubuntu Server"
 datePublished: Mon Aug 14 2023 07:55:40 GMT+0000 (Coordinated Universal Time)
 cuid: cllakyj7a00010ahz6af8h63q
 slug: install-php-fpm-postgresql-ubuntu-server
-canonical: https://josuamarcelc.com/install-php-8-2-on-ubuntu-with-nginx/
 tags: postgresql, php, fpm
 
 ---
 
+## Install the PostgreSQL Database Server Package
+
+1. Add the PostgreSQL repository to your server's APT sources.
+    
+    ```bash
+    $ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+    ```
+    
+2. Import the PostgreSQL repository key to your server using the `wget` utility.
+    
+    ```bash
+    $ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo tee /etc/apt/trusted.gpg.d/postgresql.asc > /dev/null
+    ```
+    
+3. Update the server packages to synchronize the new PostgreSQL repository.
+    
+    ```bash
+    $ sudo apt update
+    ```
+    
+4. Install PostgreSQL on your server.
+    
+5. ```bash
+    $ sudo apt install postgresql
+    ```
+    
+6. Start the PostgreSQL database server.
+    
+    ```bash
+    $ sudo systemctl restart postgresql
+    ```
+    
+7. View the PostgreSQL service status and verify that it's active.
+    
+    ```bash
+    $ sudo systemctl status postgresql
+    ```
+    
+    Output:
+    
+    ```bash
+    ● postgresql.service - PostgreSQL RDBMS
+         Loaded: loaded (/lib/systemd/system/postgresql.service; enabled; vendor preset: enabled)
+         Active: active (exited) since Sun 2024-04-21 16:08:10 UTC; 13s ago
+        Process: 6756 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+       Main PID: 6756 (code=exited, status=0/SUCCESS)
+            CPU: 1ms
+    ```
+    
+
+## PHP
+
+  
 **ALL IN ONE CODE**
 
 ```bash
@@ -104,4 +156,10 @@ This command will install the following modules:
 * `php8.2-pgsql` – for working with PostgreSQL databases
     
 
-src = [https://josuamarcelc.com/install-php-8-2-on-ubuntu-with-nginx/](https://josuamarcelc.com/install-php-8-2-on-ubuntu-with-nginx/)
+---
+
+**src** :
+
+* [https://josuamarcelc.com/install-php-8-2-on-ubuntu-with-nginx/](https://josuamarcelc.com/install-php-8-2-on-ubuntu-with-nginx/)
+    
+* [https://docs.vultr.com/how-to-install-postgresql-database-server-on-ubuntu-22-04](https://docs.vultr.com/how-to-install-postgresql-database-server-on-ubuntu-22-04)

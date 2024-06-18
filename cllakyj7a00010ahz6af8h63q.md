@@ -30,7 +30,7 @@ tags: postgresql, php, fpm
 4. Install PostgreSQL on your server.
     
 5. ```bash
-    $ sudo apt install postgresql
+     $ sudo apt install postgresql-15
     ```
     
 6. Start the PostgreSQL database server.
@@ -59,7 +59,6 @@ tags: postgresql, php, fpm
 
 ## PHP
 
-  
 **ALL IN ONE CODE**
 
 ```bash

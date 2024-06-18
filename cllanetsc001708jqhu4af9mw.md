@@ -4,7 +4,7 @@ datePublished: Mon Aug 14 2023 09:04:19 GMT+0000 (Coordinated Universal Time)
 cuid: cllanetsc001708jqhu4af9mw
 slug: install-nginx-php-postgresql-for-laravellumen-ubuntu-server
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1692006595680/7d39ef6d-90c0-4b28-9559-3d68c6545294.png
-tags: laravel, ubuntu-server, laravel-lumen, lnpp
+tags: postgresql, laravel, nginx, php, ubuntu-server, laravel-lumen
 
 ---
 

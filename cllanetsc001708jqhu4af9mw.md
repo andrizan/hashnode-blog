@@ -393,3 +393,5 @@ src:
 * [https://www.nginx.com/resources/wiki/start/topics/tutorials/install/](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)
     
 * [https://josuamarcelc.com/install-php-8-2-on-ubuntu-with-nginx/](https://josuamarcelc.com/install-php-8-2-on-ubuntu-with-nginx/)
+    
+* [https://docs.vultr.com/how-to-install-postgresql-database-server-on-ubuntu-22-04](https://docs.vultr.com/how-to-install-postgresql-database-server-on-ubuntu-22-04)

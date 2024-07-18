@@ -328,7 +328,7 @@ sudo chown prometheus:prometheus /usr/local/bin/promtool
 
 ## Move the Configuration Files & Set Owner
 
-Create `minio-alerting.yml`
+### Create `minio-alerting.yml`
 
 ```yaml
 # minio-alerting.yml 
@@ -354,7 +354,39 @@ groups:
       description: "Disks(s) in cluster {{ $labels.instance }} offline for more than 5 minutes"
 ```
 
-change `prometheus.yml`
+### Create ALIAS for `mc`
+
+1. install `mc`
+    
+    ```bash
+    curl https://dl.min.io/client/mc/release/linux-amd64/mc \
+      --create-dirs \
+      -o $HOME/minio-binaries/mc
+    
+    chmod +x $HOME/minio-binaries/mc
+    export PATH=$PATH:$HOME/minio-binaries/
+    
+    mc --help
+    ```
+    
+    https://min.io/docs/minio/linux/reference/minio-mc.html
+    
+2. Create ALIAS
+    
+    ```bash
+    mc alias set ALIAS HOSTNAME ACCESS_KEY SECRET_KEY
+    ```
+    
+3. Generate minio job
+    
+    ```bash
+    mc admin prometheus generate s3-example 
+    ```
+    
+    https://min.io/docs/minio/linux/reference/minio-mc-admin/mc-admin-prometheus.html
+    
+
+### Change `prometheus.yml`
 
 ```yaml
 # my global config
@@ -380,7 +412,7 @@ rule_files:
 # Here it's Prometheus itself.
 scrape_configs:
   - job_name: minio-job
-    bearer_token: <TOKEN> # https://min.io/docs/minio/linux/reference/minio-mc-admin/mc-admin-prometheus.html | https://min.io/docs/minio/linux/reference/minio-mc.html
+    bearer_token: <TOKEN>
     metrics_path: /minio/v2/metrics/cluster
     scheme: http
     static_configs:
@@ -396,11 +428,9 @@ scrape_configs:
       - targets: ["localhost:9090"]
 ```
 
-how to get tokens can be read here [https://min.io/docs/minio/linux/reference/minio-mc-admin/mc-admin-prometheus.html](https://min.io/docs/minio/linux/reference/minio-mc-admin/mc-admin-prometheus.html)
+### Move Prometeus Files & Set Ownership
 
-install `mc-cli` binary [https://min.io/docs/minio/linux/reference/minio-mc.html](https://min.io/docs/minio/linux/reference/minio-mc.html)
-
-Next, move the configuration files and set their ownership so that Prometheus can access them. To do this, run the following commands:
+Move the configuration files and set their ownership so that Prometheus can access them. To do this, run the following commands:
 
 ```bash
 sudo mv consoles /etc/prometheus
@@ -441,6 +471,8 @@ sudo nano /etc/systemd/system/prometheus.service
 ```
 
 Include these settings to the file, save, and exit:
+
+Configuration (Recomended)
 
 ```bash
 [Unit]

@@ -369,7 +369,7 @@ groups:
     mc --help
     ```
     
-    or add `PATH=$PATH:$HOME/minio-binaries/` on `~/.profile`
+    or add `export PATH=$PATH:$HOME/minio-binaries/` on `~/.profile`
     
     https://min.io/docs/minio/linux/reference/minio-mc.html
     

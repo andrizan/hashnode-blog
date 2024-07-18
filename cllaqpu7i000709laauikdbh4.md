@@ -369,18 +369,20 @@ groups:
     mc --help
     ```
     
-    https://min.io/docs/minio/linux/reference/minio-mc.html
+    or add `PATH=$PATH:$HOME/minio-binaries/` on `~/.profile`
     
-2. Create ALIAS
+2. https://min.io/docs/minio/linux/reference/minio-mc.html
+    
+3. Create ALIAS
     
     ```bash
     mc alias set ALIAS HOSTNAME ACCESS_KEY SECRET_KEY
     ```
     
-3. Generate minio job
+4. Generate minio job
     
     ```bash
-    mc admin prometheus generate s3-example 
+    mc admin prometheus generate s3-example
     ```
     
     https://min.io/docs/minio/linux/reference/minio-mc-admin/mc-admin-prometheus.html

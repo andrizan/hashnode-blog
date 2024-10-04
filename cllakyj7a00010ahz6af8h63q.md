@@ -30,7 +30,7 @@ tags: postgresql, php, fpm
 4. Install PostgreSQL on your server.
     
 5. ```bash
-      $ sudo apt install postgresql-15
+       $ sudo apt install postgresql-15
     ```
     
 6. Start the PostgreSQL database server.
@@ -62,7 +62,7 @@ tags: postgresql, php, fpm
 **ALL IN ONE CODE**
 
 ```bash
-sudo apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 sudo add-apt-repository ppa:ondrej/php #private repo
 sudo apt update
 sudo apt-get install -y php8.2-fpm php8.2-cli php8.2-common php8.2-zip php8.2-gd php8.2-mbstring php8.2-curl php8.2-xml php8.2-bcmath php8.2-pgsql

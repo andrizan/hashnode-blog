@@ -65,7 +65,7 @@ tags: postgresql, laravel, nginx, php, ubuntu-server, laravel-lumen
 ### **ALL IN ONE CODE**
 
 ```bash
-sudo apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 sudo add-apt-repository ppa:ondrej/php #private repo
 sudo apt update
 sudo apt-get install -y php8.2-fpm php8.2-cli php8.2-common php8.2-zip php8.2-gd php8.2-mbstring php8.2-curl php8.2-xml php8.2-bcmath php8.2-pgsql
@@ -76,7 +76,7 @@ sudo apt-get install -y php8.2-fpm php8.2-cli php8.2-common php8.2-zip php8.2-gd
 The first thing to do in a new system is to update our repositories in order to make them up to date. Run upgrade command also.
 
 ```bash
-sudo apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 ```
 
 ### 2\. Add Ondrej sury PPA repository

@@ -349,8 +349,8 @@ server {
 
 ```bash
 cd /var/www/
-sudo chown www-data:www-data <DIR>
-sudo chmod g+w <DIR>
+sudo chown -R www-data:www-data <DIR>
+sudo chmod -R g+w <DIR>
 ```
 
 set user nginx

@@ -143,29 +143,6 @@ This command will install the following modules:
 
 ---
 
-## Install Certbot (Let’s Encrypt Client)
-
-1. Install Certbot using the following command.
-    
-
-```bash
-sudo apt install certbot python3-certbot-nginx
-```
-
-2. Run Certbot to obtain and install the SSL certificate for your domain. Replace `your_domain` with your actual domain name.
-    
-
-```bash
-sudo certbot --nginx -d your_domain
-```
-
-3. Verify Certificate Renewal (Optional)
-    
-
-```bash
-sudo certbot renew --dry-run
-```
-
 **src** :
 
 * [https://josuamarcelc.com/install-php-8-2-on-ubuntu-with-nginx/](https://josuamarcelc.com/install-php-8-2-on-ubuntu-with-nginx/)

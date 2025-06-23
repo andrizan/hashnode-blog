@@ -30,4 +30,10 @@ To copy a file from `B` to `A` while logged into `B`. NON STANDARD PORT:
 scp -P 2200 /path/to/file username@a:/path/to/destination
 ```
 
+download file:
+
+```bash
+scp riski@192.168.10.8:~/minio .
+```
+
 [https://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh](https://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh)

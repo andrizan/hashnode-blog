@@ -108,8 +108,8 @@ MINIO_VOLUMES="/mnt/data"
 
 # Uncomment the following line and replace the value with the correct hostname for the local machine and port for the MinIO server (9000 by default).
 
-#MINIO_SERVER_URL="http://ip:9060"
-#MINIO_CONSOLE_ADDRESS=":9000"
+#MINIO_SERVER_URL="http://s3.domain.com"
+#MINIO_CONSOLE_ADDRESS=":9001"
 #MINIO_BROWSER_REDIRECT_URL="http://s3.domain.com/minio/ui"
 
 #MINIO_PROMETHEUS_URL=http://192.168.100.16:9090
@@ -122,7 +122,7 @@ Include any other environment variables as required for your local deployment.
 
 install nginx
 
-```bash
+```nginx
 server {
    server_name s3.domain.com;
    listen 80;
@@ -379,6 +379,12 @@ groups:
     mc alias set ALIAS HOSTNAME ACCESS_KEY SECRET_KEY
     ```
     
+    Example:
+    
+    ```bash
+    mc alias set s3example https://s3.domain.com user 'password'
+    ```
+    
 3. Generate minio job
     
     ```bash
@@ -476,7 +482,7 @@ Include these settings to the file, save, and exit:
 
 Configuration (Recomended)
 
-```bash
+```apache
 [Unit]
 Description=Prometheus
 Wants=network-online.target
@@ -498,7 +504,7 @@ WantedBy=multi-user.target
 
 **Alternative Config**
 
-```bash
+```apache
 [Unit]
 Description=Prometheus #Description
 Documentation=https://prometheus.io/docs/introduction/overview/ #reference to documentation

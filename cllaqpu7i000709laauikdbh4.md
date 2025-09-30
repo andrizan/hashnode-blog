@@ -359,12 +359,13 @@ groups:
 1. install `mc`
     
     ```bash
-    curl https://dl.min.io/client/mc/release/linux-amd64/mc \
-      --create-dirs \
-      -o $HOME/minio-binaries/mc
+    curl --progress-bar -L https://dl.min.io/aistor/mc/release/linux-amd64/mc \
+    --create-dirs \
+    -o $HOME/aistor-binaries/mc
     
-    chmod +x $HOME/minio-binaries/mc
-    export PATH=$PATH:$HOME/minio-binaries/
+    chmod +x ~/aistor-binaries/mc
+    echo 'export PATH="$HOME/aistor-binaries:$PATH"' >> ~/.bashrc
+    source ~/.bashrc
     
     mc --help
     ```
